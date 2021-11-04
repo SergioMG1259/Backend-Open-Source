@@ -15,4 +15,6 @@ public class MappingConfiguration {
     public CompanyMapper companyMapper(){return new CompanyMapper();}
     @Bean
     public AnnouncementMapper announcementMapper(){return new AnnouncementMapper();}
+    @Bean
+    public SpecialtyMapper specialtyMapper(){return new SpecialtyMapper();}
 }
