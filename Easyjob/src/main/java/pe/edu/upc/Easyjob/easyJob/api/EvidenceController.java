@@ -32,7 +32,7 @@ public class EvidenceController {
         return mapper.toResource(evidenceService.create(projectId, mapper.toModel(request)));
     }
     @PutMapping("{evidenceId}")
-    public EvidenceResource updateComment(@PathVariable Long projectId,
+    public EvidenceResource updateEvidence(@PathVariable Long projectId,
                                          @PathVariable Long evidenceId,
                                          @RequestBody UpdateEvidenceResource request) {
         return mapper.toResource(evidenceService.update(projectId, evidenceId, mapper.toModel(request)));

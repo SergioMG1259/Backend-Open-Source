@@ -1,5 +1,4 @@
 package pe.edu.upc.Easyjob.easyJob.domain.model.entity;
-
 import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 import lombok.*;
 import org.hibernate.annotations.Type;
@@ -16,30 +15,33 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @With
-@Table(name = "companies")
-public class Company extends AuditModel{
+@Table(name = "announcements")
+public class Announcement extends AuditModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
     @Size(max=50)
-    private String namecompany;
+    private String title;
 
     @NotNull
-    private String email;
-
+    @Size(max=400)
+    private String description;
     @NotNull
-    @Size(max=20)
-    private String password;
-
+    private String requiredspecialty;
     @NotNull
-    @Size(max=600)
-    private String descriptioncompany;
-
+    private String requiredexperience;
     @NotNull
-    private String imgcompany;
+    private Long salary;
+    @NotNull
+    private String typemoney;
+    @NotNull
+    private Boolean visible;
+    @NotNull
+    private String date;
 
-    @OneToMany
-    private List<Announcement> announcements;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "company_id", nullable = false)
+    private Company company;
 }
