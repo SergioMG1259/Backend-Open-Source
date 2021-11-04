@@ -8,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
+//ESto es el modelo de los anuncion utilizados por las empresas
 
 @Getter
 @Setter
