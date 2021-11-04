@@ -30,12 +30,12 @@ public class ProjectController {
         return mapper.toResource(projectService.getByIdAndPostulantId(postulantId, projectId));
     }
     @PostMapping
-    public ProjectResource createComment(@PathVariable Long postulantId,
+    public ProjectResource createProject(@PathVariable Long postulantId,
                                          @RequestBody CreateProjectResource request) {
         return mapper.toResource(projectService.create(postulantId, mapper.toModel(request)));
     }
     @PutMapping("{projectId}")
-    public ProjectResource updateComment(@PathVariable Long postulantId,
+    public ProjectResource updateProject(@PathVariable Long postulantId,
                                          @PathVariable Long projectId,
                                          @RequestBody UpdateProjectResource request) {
         return mapper.toResource(projectService.update(postulantId, projectId, mapper.toModel(request)));
