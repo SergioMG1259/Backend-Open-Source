@@ -47,4 +47,6 @@ public class Postulant extends AuditModel{
     private String imgpostulant;
     @OneToMany
     private List<Project> projects;
+    @OneToMany
+    private List<Specialty> specialties;
 }
