@@ -1,5 +1,5 @@
 package pe.edu.upc.Easyjob.easyJob.domain.model.entity;
-
+/*Entidas compañia*/
 import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 import lombok.*;
 import org.hibernate.annotations.Type;
