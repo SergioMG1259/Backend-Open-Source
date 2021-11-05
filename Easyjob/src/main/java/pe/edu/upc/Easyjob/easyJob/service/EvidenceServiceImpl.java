@@ -3,9 +3,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import pe.edu.upc.Easyjob.easyJob.domain.model.entity.Evidence;
-import pe.edu.upc.Easyjob.easyJob.domain.model.entity.Project;
 import pe.edu.upc.Easyjob.easyJob.domain.persistence.EvidenceRepository;
-import pe.edu.upc.Easyjob.easyJob.domain.persistence.PostulantRepository;
 import pe.edu.upc.Easyjob.easyJob.domain.persistence.ProjectResporitory;
 import pe.edu.upc.Easyjob.easyJob.domain.service.EvidenceService;
 import pe.edu.upc.Easyjob.shared.exception.ResourceNotFoundException;
@@ -76,7 +74,7 @@ public class EvidenceServiceImpl implements EvidenceService {
                         evidence.withDescriptionevidence(request.getDescriptionevidence())
                                 .withTitleevidence(request.getTitleevidence())
                                 .withImgevidence(request.getImgevidence()))
-        ).orElseThrow(() -> new ResourceNotFoundException(ENTITY, projectId));
+        ).orElseThrow(() -> new ResourceNotFoundException(ENTITY, evidenceId));
     }
 
     @Override

@@ -9,6 +9,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
+/*Postulant CRUD*/
+
 @Getter
 @Setter
 @Entity
@@ -45,4 +47,6 @@ public class Postulant extends AuditModel{
     private String imgpostulant;
     @OneToMany
     private List<Project> projects;
+    @OneToMany
+    private List<Specialty> specialties;
 }

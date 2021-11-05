@@ -7,29 +7,26 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-//Esto es evidencia de un proyecto
+/*Especialidad y la experiencia que tiene un postulante*/
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @With
-@Table(name = "evidences")
-public class Evidence extends AuditModel{
+@Table(name = "specialties")
+public class Specialty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    @Size(max=50)
-    private String titleevidence;
+    private String specialty;
 
-    @Size(max=400)
-    private String descriptionevidence;
-
-    private String imgevidence;
+    @NotNull
+    private String experience;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "project_id", nullable = false)
-    private Project project;
+    @JoinColumn(name = "postulant_id", nullable = false)
+    private Postulant postulant;
 }

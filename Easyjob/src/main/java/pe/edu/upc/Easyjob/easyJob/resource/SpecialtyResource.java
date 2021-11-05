@@ -1,20 +1,14 @@
 package pe.edu.upc.Easyjob.easyJob.resource;
-
 import lombok.Getter;
 import lombok.Setter;
 /*Proyecto de un postulante*/
 @Getter
 @Setter
-public class ProjectResource {
-
+public class SpecialtyResource {
     private Long id;
 
-    private String title;
+    private String specialty;
 
-    private String description;
-
-    private String linktogithub;
-
-    private String imgproject;
+    private String experience;
 
 }
