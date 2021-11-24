@@ -1,4 +1,5 @@
 package pe.edu.upc.Easyjob.easyJob.api;
+//Hello
 import pe.edu.upc.Easyjob.easyJob.domain.service.AnnouncementService;
 import pe.edu.upc.Easyjob.easyJob.mapping.AnnouncementMapper;
 import pe.edu.upc.Easyjob.easyJob.resource.*;
