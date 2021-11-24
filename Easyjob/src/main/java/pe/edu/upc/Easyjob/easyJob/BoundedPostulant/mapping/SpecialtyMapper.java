@@ -1,14 +1,18 @@
-package pe.edu.upc.Easyjob.easyJob.mapping;
-import pe.edu.upc.Easyjob.easyJob.domain.model.entity.Specialty;
-import pe.edu.upc.Easyjob.easyJob.resource.*;
-import pe.edu.upc.Easyjob.shared.mapping.EnhancedModelMapper;
+package pe.edu.upc.Easyjob.easyJob.BoundedPostulant.mapping;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.domain.model.entity.Specialty;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.resource.CreateSpecialtyResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.resource.SpecialtyResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.resource.UpdateSpecialtyResource;
+import pe.edu.upc.Easyjob.shared.mapping.EnhancedModelMapper;
 
 import java.io.Serializable;
 import java.util.List;
+
 public class SpecialtyMapper implements Serializable{
     @Autowired
     EnhancedModelMapper mapper;

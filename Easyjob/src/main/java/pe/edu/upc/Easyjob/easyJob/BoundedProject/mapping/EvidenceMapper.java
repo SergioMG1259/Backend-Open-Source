@@ -1,15 +1,19 @@
-package pe.edu.upc.Easyjob.easyJob.mapping;
-import pe.edu.upc.Easyjob.easyJob.domain.model.entity.Evidence;
-import pe.edu.upc.Easyjob.easyJob.resource.*;
-import pe.edu.upc.Easyjob.shared.mapping.EnhancedModelMapper;
+package pe.edu.upc.Easyjob.easyJob.BoundedProject.mapping;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.domain.model.entity.Evidence;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.resource.CreateEvidenceResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.resource.EvidenceResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.resource.UpdateEvidenceResource;
+import pe.edu.upc.Easyjob.shared.mapping.EnhancedModelMapper;
 
 import java.io.Serializable;
 import java.util.List;
-public class EvidenceMapper {
+
+public class EvidenceMapper implements Serializable {
     @Autowired
     EnhancedModelMapper mapper;
 

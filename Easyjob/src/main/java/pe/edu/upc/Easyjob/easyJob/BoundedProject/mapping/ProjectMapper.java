@@ -1,14 +1,14 @@
-package pe.edu.upc.Easyjob.easyJob.mapping;
+package pe.edu.upc.Easyjob.easyJob.BoundedProject.mapping;
 
-import pe.edu.upc.Easyjob.easyJob.domain.model.entity.Project;
-import pe.edu.upc.Easyjob.easyJob.resource.ProjectResource;
-import pe.edu.upc.Easyjob.easyJob.resource.CreateProjectResource;
-import pe.edu.upc.Easyjob.easyJob.resource.UpdateProjectResource;
-import pe.edu.upc.Easyjob.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.domain.model.entity.Project;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.resource.CreateProjectResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.resource.ProjectResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedProject.resource.UpdateProjectResource;
+import pe.edu.upc.Easyjob.shared.mapping.EnhancedModelMapper;
 
 import java.io.Serializable;
 import java.util.List;

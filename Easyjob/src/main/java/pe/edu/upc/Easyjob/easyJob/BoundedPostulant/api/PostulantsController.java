@@ -1,18 +1,18 @@
-package pe.edu.upc.Easyjob.easyJob.api;
-
-import pe.edu.upc.Easyjob.easyJob.domain.service.PostulantService;
-import pe.edu.upc.Easyjob.easyJob.mapping.PostulantMapper;
-import pe.edu.upc.Easyjob.easyJob.resource.PostulantResource;
-import pe.edu.upc.Easyjob.easyJob.resource.CreatePostulantResource;
+package pe.edu.upc.Easyjob.easyJob.BoundedPostulant.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.Easyjob.easyJob.resource.UpdatePostulantResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.domain.service.PostulantService;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.mapping.PostulantMapper;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.resource.AuthenticatePostulantRequest;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.resource.CreatePostulantResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.resource.PostulantResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.resource.UpdatePostulantResource;
 
-import javax.validation.Valid;
+@CrossOrigin
 @RestController
 @RequestMapping("/api/v1/postulants")
 public class PostulantsController {
@@ -40,6 +40,10 @@ public class PostulantsController {
     @DeleteMapping("{postulantId}")
     public ResponseEntity<?> deletePostulant(@PathVariable Long postulantId) {
         return postulantService.delete(postulantId);
+    }
+    @PostMapping("auth/sign-in")
+    public PostulantResource Authenticate(@RequestBody AuthenticatePostulantRequest request){
+        return mapper.toResource(postulantService.getByEmailAndPassword((request)));
     }
 
 }
