@@ -1,12 +1,12 @@
 package pe.edu.upc.Easyjob.easyJob.BoundedAnnouncement.domain.model.entity;
 import pe.edu.upc.Easyjob.easyJob.BoundedApplication.domain.model.entity.Application;
 import pe.edu.upc.Easyjob.easyJob.BoundedCompany.domain.model.entity.Company;
-import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.List;
 //ESto es el modelo de los anuncion utilizados por las empresas
 
@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @With
 @Table(name = "announcements")
-public class Announcement extends AuditModel{
+public class Announcement implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

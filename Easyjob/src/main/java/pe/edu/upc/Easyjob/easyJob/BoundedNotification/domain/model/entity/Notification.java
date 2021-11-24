@@ -1,15 +1,12 @@
 package pe.edu.upc.Easyjob.easyJob.BoundedNotification.domain.model.entity;
 import pe.edu.upc.Easyjob.easyJob.BoundedAnnouncement.domain.model.entity.Announcement;
-import pe.edu.upc.Easyjob.easyJob.BoundedApplication.domain.model.entity.Application;
 import pe.edu.upc.Easyjob.easyJob.BoundedCompany.domain.model.entity.Company;
 import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.domain.model.entity.Postulant;
-import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.List;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -18,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @With
 @Table(name = "notifications")
-public class Notification extends AuditModel {
+public class Notification implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

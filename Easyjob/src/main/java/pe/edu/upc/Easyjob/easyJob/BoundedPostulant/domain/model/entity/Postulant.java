@@ -1,12 +1,12 @@
 package pe.edu.upc.Easyjob.easyJob.BoundedPostulant.domain.model.entity;
 import pe.edu.upc.Easyjob.easyJob.BoundedApplication.domain.model.entity.Application;
 import pe.edu.upc.Easyjob.easyJob.BoundedProject.domain.model.entity.Project;
-import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.List;
 
 /*Postulant CRUD*/
@@ -18,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @With
 @Table(name = "postulants")
-public class Postulant extends AuditModel{
+public class Postulant implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

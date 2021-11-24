@@ -1,13 +1,11 @@
 package pe.edu.upc.Easyjob.easyJob.domain.model.entity;
 /*Entidas compañia*/
-import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 import lombok.*;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
@@ -17,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @With
 @Table(name = "companies")
-public class Company extends AuditModel{
+public class Company implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

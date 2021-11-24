@@ -3,10 +3,10 @@ package pe.edu.upc.Easyjob.easyJob.BoundedApplication.domain.model.entity;
 import lombok.*;
 import pe.edu.upc.Easyjob.easyJob.BoundedAnnouncement.domain.model.entity.Announcement;
 import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.domain.model.entity.Postulant;
-import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @With
 @Table(name = "applications")
-public class Application extends AuditModel {
+public class Application implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

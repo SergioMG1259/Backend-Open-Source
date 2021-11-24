@@ -1,11 +1,11 @@
 package pe.edu.upc.Easyjob.easyJob.BoundedProject.domain.model.entity;
-import pe.edu.upc.Easyjob.easyJob.BoundedProject.domain.model.entity.Project;
-import pe.edu.upc.Easyjob.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
+
 //Esto es evidencia de un proyecto
 @Getter
 @Setter
@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @With
 @Table(name = "evidences")
-public class Evidence extends AuditModel{
+public class Evidence implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
