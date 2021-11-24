@@ -1,14 +1,15 @@
 package pe.edu.upc.Easyjob.easyJob.mapping;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import pe.edu.upc.Easyjob.easyJob.BoundedAnnouncement.mapping.AnnouncementMapper;
+import pe.edu.upc.Easyjob.easyJob.BoundedApplication.mapping.ApplicationMapper;
 import pe.edu.upc.Easyjob.easyJob.BoundedCompany.mapping.CompanyMapper;
 import pe.edu.upc.Easyjob.easyJob.BoundedNotification.mapping.NotificationMapper;
+import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.mapping.PostulantMapper;
 import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.mapping.SpecialtyMapper;
 import pe.edu.upc.Easyjob.easyJob.BoundedProject.mapping.EvidenceMapper;
-import pe.edu.upc.Easyjob.easyJob.BoundedPostulant.mapping.PostulantMapper;
 import pe.edu.upc.Easyjob.easyJob.BoundedProject.mapping.ProjectMapper;
-import pe.edu.upc.Easyjob.easyJob.BoundedApplication.mapping.ApplicationMapper;
 @Configuration("easyJobMappingConfiguration")
 
 public class MappingConfiguration {
