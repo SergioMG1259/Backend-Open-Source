@@ -1,15 +1,18 @@
-package pe.edu.upc.Easyjob.easyJob.api;
-import pe.edu.upc.Easyjob.easyJob.domain.service.CompanyService;
-import pe.edu.upc.Easyjob.easyJob.mapping.CompanyMapper;
-import pe.edu.upc.Easyjob.easyJob.resource.*;
+package pe.edu.upc.Easyjob.easyJob.BoundedCompany.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.Easyjob.easyJob.BoundedCompany.domain.service.CompanyService;
+import pe.edu.upc.Easyjob.easyJob.BoundedCompany.mapping.CompanyMapper;
+import pe.edu.upc.Easyjob.easyJob.BoundedCompany.resource.AuthenticateCompanyRequest;
+import pe.edu.upc.Easyjob.easyJob.BoundedCompany.resource.CompanyResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedCompany.resource.CreateCompanyResource;
+import pe.edu.upc.Easyjob.easyJob.BoundedCompany.resource.UpdateCompanyResource;
 
-import javax.validation.Valid;
+@CrossOrigin
 @RestController
 @RequestMapping("/api/v1/companies")
 public class CompanyController {
@@ -38,5 +41,8 @@ public class CompanyController {
     public ResponseEntity<?> deleteCompany(@PathVariable Long companyId) {
         return companyService.delete(companyId);
     }
-
+    @PostMapping("auth/sign-in")
+    public CompanyResource Authenticate(@RequestBody AuthenticateCompanyRequest request){
+        return mapper.toResource(companyService.Authenticate((request)));
+    }
 }
